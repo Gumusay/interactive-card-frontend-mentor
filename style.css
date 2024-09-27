@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+:root{
+--Red: hsl(0, 100%, 66%);
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    font-family: "Space Grotesk", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.error{
+    border: 2px solid var(--Red);
+}
+
+.error_message{
+    gap: 0;
+}
+
+.error-message::after{
+    content: "can't be blank";
+    color: var(--Red);
+    margin-top: .2rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.left-section{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url("images/bg-main-desktop.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cards{
+    position: absolute;
+    top:50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%,-50%);    
+}
+
+.front-card{
+    position: relative;
+    transform: translateX(-100px);
+}
+
+.card-logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+#number{
+    position: absolute;
+    color: var(--White);
+    bottom: 5rem;
+    left: 2rem;
+    letter-spacing: 1px;
+}
+
+.card-info{
+    display: flex;
+    justify-content: center;
+    color: var(--White);
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 3rem;
+    gap: 20px;
+}
+
+.back-card{
+    position: relative;
+}
+
+#cvc{
+    position: absolute;
+    right: 4rem;
+    top: 7rem;
+    color: var(--Light-grayish-violet);
+}
+
+.right-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 1rem;
+    width: 350px;
+}
+
+label{
+    color: var(--Very-dark-violet);
+    margin-bottom: .3rem;
+    text-transform: uppercase;
+}
+
+input{
+    padding: .5rem;
+    border-radius: 6px;
+    font-size: 18px;
+    border: 1px solid var(--Dark-grayish-violet);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::placeholder{
+    font-family: inherit;
+    color: var(--Dark-grayish-violet);
+}
+
+input:focus{
+    outline-color: hsl(249,99%,64%);
+}
+
+.grid1, .grid-2{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+/* 
+.grid3{
+    display: flex;
+    flex-direction: column;
+} */
+
+.grid4{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+
+.card-information{
+    display: flex;
+    grid-column: 2 span;
+    gap: 1rem;
+}
+
+#card-date{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+
+.two-input{
+    display: flex;
+}
+
+.two-input1, .two-input2{
+    flex-direction: column;
+}
+
+#card-cvc{
+    width: 100%;
+}
+#card-date input{
+    margin-inline: .5rem;
+    margin-left: 0;
+    width: 70px;
+}
+
+form button{
+    cursor: pointer;
+    grid-column: 2 span;
+    border-radius: 6px;
+    font-size: 18px;
+    height: 50px;
+    color: var(--White);
+    background-color: var(--Very-dark-violet);
+}
+
+.thankYouPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    gap: 2rem;
+}
+
+.thankYouPage p{
+    font-size: 18px;
+    color: var(--Dark-grayish-violet);
+}
+
+.thankYouPage button{
+    background-color: var(--Very-dark-violet);
+    font-size: 18px;
+    border-radius: 6px;
+    width: 100%;
+    color: var(--White);
+    padding: 1rem;
+}
+
